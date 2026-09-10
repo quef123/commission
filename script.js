@@ -22,24 +22,27 @@ UST / 工程情况：
 
 document.querySelector(".menu-btn")?.addEventListener("click", () => {
   const nav = document.querySelector(".topbar nav");
-  if(!nav) return;
-  const isOpen = nav.dataset.open === "1";
-  if(isOpen){
+  if (!nav) return;
+  const open = nav.dataset.open === "1";
+
+  if (open) {
     nav.removeAttribute("style");
     nav.dataset.open = "0";
-  }else{
-    Object.assign(nav.style,{
-      display:"flex",
-      position:"absolute",
-      top:"58px",
-      left:"0",
-      right:"0",
-      flexDirection:"column",
-      gap:"14px",
-      padding:"16px 24px",
-      background:"#efefec",
-      borderBottom:"1px solid #1c1c1c"
-    });
-    nav.dataset.open = "1";
+    return;
   }
+
+  Object.assign(nav.style, {
+    display: "flex",
+    position: "absolute",
+    top: "68px",
+    left: "0",
+    right: "0",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: "14px",
+    padding: "18px 20px 22px",
+    background: "#fff",
+    borderBottom: "1px solid #d9d9d9"
+  });
+  nav.dataset.open = "1";
 });
