@@ -12,9 +12,9 @@ UST / 工程情况：
 
   try{
     await navigator.clipboard.writeText(template);
-    toast.textContent = "REQUEST TEMPLATE COPIED.";
+    toast.textContent = "委托模板已复制";
   }catch(e){
-    toast.textContent = "COPY FAILED.";
+    toast.textContent = "复制失败，请手动复制";
   }
   toast.classList.add("show");
   setTimeout(()=>toast.classList.remove("show"),1800);
