@@ -1,8 +1,9 @@
-const btn = document.querySelector(".copy-template");
+const copyButton = document.querySelector(".copy-template");
 const toast = document.getElementById("toast");
+const menuButton = document.querySelector(".menu-btn");
+const navigation = document.getElementById("site-nav");
 
-btn?.addEventListener("click", async () => {
-  const template = `【委托投递】
+const requestTemplate = `【委托投递】
 曲名：
 希望档期：
 使用音源：
@@ -10,39 +11,32 @@ btn?.addEventListener("click", async () => {
 UST / 工程情况：
 参考 / 补充说明：`;
 
-  try{
-    await navigator.clipboard.writeText(template);
+copyButton?.addEventListener("click", async () => {
+  if (!toast) return;
+
+  try {
+    await navigator.clipboard.writeText(requestTemplate);
     toast.textContent = "委托模板已复制";
-  }catch(e){
+  } catch {
     toast.textContent = "复制失败，请手动复制";
   }
+
   toast.classList.add("show");
-  setTimeout(()=>toast.classList.remove("show"),1800);
+  window.setTimeout(() => toast.classList.remove("show"), 1800);
 });
 
-document.querySelector(".menu-btn")?.addEventListener("click", () => {
-  const nav = document.querySelector(".topbar nav");
-  if (!nav) return;
-  const open = nav.dataset.open === "1";
+if (menuButton && navigation) {
+  const closeMenu = () => {
+    navigation.classList.remove("is-open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "打开菜单");
+  };
 
-  if (open) {
-    nav.removeAttribute("style");
-    nav.dataset.open = "0";
-    return;
-  }
-
-  Object.assign(nav.style, {
-    display: "flex",
-    position: "absolute",
-    top: "68px",
-    left: "0",
-    right: "0",
-    flexDirection: "column",
-    alignItems: "flex-start",
-    gap: "14px",
-    padding: "18px 20px 22px",
-    background: "#fff",
-    borderBottom: "1px solid #d9d9d9"
+  menuButton.addEventListener("click", () => {
+    const isOpen = navigation.classList.toggle("is-open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "关闭菜单" : "打开菜单");
   });
-  nav.dataset.open = "1";
-});
+
+  navigation.addEventListener("click", closeMenu);
+}
