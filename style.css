@@ -211,3 +211,192 @@ footer a:hover{text-decoration:underline;text-underline-offset:3px}
   .after-note{margin-top:30px}
   footer{flex-wrap:wrap}
 }
+
+/* -------------------------------------------------------
+  QUEF CMS / THE OTHER ROOM
+  Dreamlike editorial intervention. Completely original geometry.
+  Existing services, conditions and links remain unchanged.
+-------------------------------------------------------- */
+:root{
+ --black:#17191b;
+ --white:#f8f8f1;
+ --max:1040px;
+ --dream-blue:#3158c9;
+ --dream-rose:#e95047;
+}
+html{scroll-padding-top:80px}
+body{background:var(--white);color:var(--black);font-weight:400}
+.topbar{
+ height:74px;background:var(--white);border-bottom:1px solid #b6b7ae;
+ padding:0 max(32px,calc((100vw - var(--max))/2));
+}
+.brand{gap:11px}
+.brand span{font-family:Georgia,"Times New Roman",serif;font-size:25px;font-weight:400;letter-spacing:-.045em}
+.brand small{font:10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.07em}
+.topbar nav{gap:38px}
+.topbar nav a{font-size:13px}
+.topbar nav a:hover{text-decoration:none;color:var(--dream-blue)}
+main,footer{width:min(var(--max),calc(100% - 64px))}
+.dream-hero{padding-top:26px;position:relative}
+.dream-hero-overline,.dream-bottom{
+ display:flex;justify-content:space-between;gap:18px;
+ font:10px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;
+ letter-spacing:.09em;color:#4c4d4b;
+}
+.dream-hero-overline{padding:0 0 22px;border-bottom:1px solid #b6b7ae}
+.dream-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;align-items:center;padding:44px 0 36px}
+.dream-copy{position:relative;z-index:2;min-width:0;align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:20px 0 12px}
+.dream-copy-note{font:11px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.07em;color:#525355;margin:0 0 26px}
+.dream-title{
+ margin:0;display:flex;flex-direction:column;align-items:flex-start;
+ font:400 clamp(92px,12vw,165px)/.72 Georgia,"Times New Roman",serif;
+ letter-spacing:-.105em;color:#17191b;
+}
+.dream-title span{margin-left:clamp(23px,5vw,71px);margin-top:16px}
+.dream-title i{font-style:normal;position:absolute;top:31%;left:88%;font-size:65px;color:var(--dream-rose);transform:rotate(24deg)}
+.dream-intro{margin:74px 0 0 8px;max-width:320px}
+.dream-jp{margin:0 0 12px;font-size:12px;letter-spacing:.08em;color:var(--dream-blue)}
+.dream-description{margin:0;font-size:16px;line-height:1.95}
+.dream-enter{
+ display:flex;align-items:center;justify-content:space-between;
+ width:min(255px,100%);margin:42px 0 0 8px;padding:11px 0 13px;
+ border-bottom:1px solid var(--black);font-size:14px;transition:padding .2s ease,color .2s ease;
+}
+.dream-enter:hover{padding-left:8px;color:var(--dream-blue)}
+.dream-enter span:last-child{font-size:19px}
+.dream-stage{position:relative;min-width:0}
+.dream-art{display:block;width:100%;height:auto;overflow:visible}
+.dream-stage-label{
+ display:flex;justify-content:space-between;align-items:center;
+ margin-top:7px;font:9px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+ letter-spacing:.075em;color:#61646a;
+}
+.floating-phone{transform-origin:320px 273px;animation:dreamFloat 7s ease-in-out infinite alternate}
+@keyframes dreamFloat{0%{translate:0 0}100%{translate:0 -9px}}
+.dream-bottom{border-top:1px solid #b6b7ae;padding:16px 0 22px}
+.dream-interval{
+ padding:15px 0 17px;display:flex;justify-content:space-between;gap:18px;
+ border-bottom:1px solid #17191b;color:#f8f8f1;background:#222936;
+ font:10px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;
+ letter-spacing:.07em;
+}
+.dream-interval span:first-child{margin-left:16px}
+.dream-interval span:last-child{margin-right:16px}
+/* The service area is editorial, not a dashboard of cards. */
+#price{padding-top:110px}
+.section-head{align-items:flex-start;padding-bottom:27px;border-bottom:1px solid #1e1e1e}
+.section-head h2,.contact-copy h2{
+ margin:0;font-family:Georgia,"Times New Roman","Songti SC",serif;
+ font-size:clamp(34px,5.3vw,60px);font-weight:400;line-height:1.08;letter-spacing:-.05em;
+}
+.section-head p{font-size:12px;color:#595953;line-height:1.8;padding-top:9px}
+.service{position:relative;padding:38px 0 0}
+.service+.service{margin-top:104px;border-top:1px solid #222}
+.service-index{display:block;margin:0 0 28px;font:10px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dream-blue);letter-spacing:.1em}
+.service-head{align-items:start;padding-bottom:26px}
+.service-head h2{font-size:clamp(25px,3vw,35px);font-weight:500;letter-spacing:-.04em}
+.price span{font-size:11px;color:#5e5f5a}
+.price strong{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(44px,6vw,76px);letter-spacing:-.055em;line-height:.9}
+.facts{border-color:#4b4c4b}
+.facts>div{padding:19px 16px}
+.facts>div+div{border-color:#c4c3b9}
+.facts dt{font-size:11px;color:#676a65}
+.facts dd{font-size:14px;font-weight:450}
+.details{column-gap:62px}
+.detail{padding:29px 0 31px;border-color:#c0c1bb}
+.detail h3{font-size:15px;font-weight:600}
+.detail li{font-size:14px;line-height:1.9}
+.service-note{font-size:14px}
+.equipment{margin-top:135px;border-color:#a7a79f;grid-template-columns:170px 1fr;padding:26px 0}
+.equipment h2{font-size:13px;font-weight:500}
+.equipment li{font-size:13px;color:#4f5051}
+.contact{
+ position:relative;isolation:isolate;grid-template-columns:240px 1fr;
+ margin-top:94px;padding:95px 50px 110px;gap:70px;
+ background:#dce5ef;width:100%;
+}
+.contact:before{
+ content:"";position:absolute;top:35px;right:44px;width:41px;height:41px;
+ border:1px solid var(--dream-rose);border-radius:50%;pointer-events:none;
+}
+.contact-copy h2{font-size:clamp(34px,4.5vw,52px)}
+.contact-copy p{font-size:14px;line-height:1.9}
+.contact-list{border-top-color:#5a6470}
+.contact-list>a,.contact-list>div{border-bottom-color:#7d8b9a}
+.contact-list span{font:11px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em}
+.contact-list strong{font-weight:500}
+.contact-list a:hover strong{color:var(--dream-blue)}
+.copy-template{
+ border:0;border-bottom:1px solid #17191b;background:transparent;
+ padding:13px 0;margin-top:20px;min-width:140px;text-align:left;
+}
+.copy-template:hover{background:transparent;color:var(--dream-blue);border-color:var(--dream-blue)}
+.after-note{border-top-color:#9faab5}
+footer{padding-top:23px;margin-top:0;border-color:#b6b7ae}
+.toast{background:#17191b}
+:focus-visible{outline:2px solid var(--dream-blue);outline-offset:4px}
+@media(max-width:900px){
+ .dream-grid{gap:15px}
+ .dream-title{font-size:clamp(81px,12.5vw,118px)}
+ .dream-title i{left:82%}
+ .dream-intro{margin-top:54px}
+}
+@media(max-width:780px){
+ .topbar{height:62px;padding:0 22px}
+ .topbar nav{top:62px;background:var(--white);gap:10px}
+ .topbar nav a{font-size:14px;min-height:42px;padding:7px 0}
+ .menu-btn{font-size:24px;min-width:44px;min-height:44px}
+ main,footer{width:calc(100% - 40px)}
+ .dream-hero{padding-top:17px}
+ .dream-hero-overline{font-size:9px}
+ .dream-hero-overline span:last-child{display:none}
+ .dream-grid{display:flex;flex-direction:column;align-items:stretch;gap:30px;padding:34px 0 25px}
+ .dream-copy{padding:0}
+ .dream-copy-note{margin-bottom:20px}
+ .dream-title{font-size:clamp(84px,22vw,138px);line-height:.76}
+ .dream-title span{margin-left:35px;margin-top:12px}
+ .dream-title i{top:16%;left:77%;font-size:49px}
+ .dream-intro{margin:36px 0 0 3px}
+ .dream-description{font-size:15px}
+ .dream-enter{margin:23px 0 0 3px;width:100%;max-width:265px;min-height:45px}
+ .dream-stage{max-width:620px;width:100%;align-self:center}
+ .dream-bottom{font-size:9px;gap:10px}
+ .dream-interval{font-size:9px}
+ #price{padding-top:78px}
+ .section-head h2{font-size:42px}
+ .service{padding-top:32px}
+ .service+.service{margin-top:75px}
+ .service-index{margin-bottom:23px}
+ .service-head h2{font-size:26px}
+ .price strong{font-size:54px}
+ .facts>div{padding:14px 0}
+ .details{gap:0}
+ .equipment{margin-top:90px}
+ .contact{margin-top:70px;padding:72px 27px 80px;gap:36px}
+ .contact:before{right:24px;top:24px;width:28px;height:28px}
+ .contact-copy h2{font-size:42px}
+ .contact-list>a,.contact-list>div{grid-template-columns:110px minmax(0,1fr);gap:12px}
+}
+@media(max-width:440px){
+ .topbar{padding:0 16px}
+ main,footer{width:calc(100% - 32px)}
+ .dream-title{font-size:clamp(75px,22vw,98px)}
+ .dream-title span{margin-left:25px}
+ .dream-stage{width:calc(100% + 10px);margin-left:-5px}
+ .dream-stage-label{font-size:8px}
+ .dream-interval span:nth-child(2){display:none}
+ .section-head{gap:16px}
+ .section-head h2{font-size:38px}
+ .section-head p{font-size:12px}
+ .price strong{font-size:48px}
+ .facts>div{grid-template-columns:88px minmax(0,1fr)}
+ .facts dd{overflow-wrap:anywhere}
+ .contact{padding:68px 20px 70px}
+ .contact-copy h2{font-size:38px}
+ .contact-list>a,.contact-list>div{grid-template-columns:86px minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .floating-phone{animation:none}
+ *{transition-duration:0.01ms!important}
+}
